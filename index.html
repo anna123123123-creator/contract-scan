@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>合同风险关键词扫描 · Contract Risk Scan</title>
+<meta name="description" content="免费开源、纯浏览器运行的合同风险关键词扫描工具，内置15类常见风险条款关键词库，粘贴合同文本一键扫描高亮。不联网、不上传合同，不构成法律意见。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>合同<span class="accent">风险关键词</span>扫描</h1>
+    <p class="tagline">粘贴合同文本，一键扫描出常见风险条款关键词并高亮标注、分类列出。基于固定关键词库匹配，<strong>不构成法律意见</strong>，仅作初步提示。</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel panel-input">
+      <div class="panel-head">
+        <span>合同文本</span>
+        <div class="btns">
+          <button id="btnExample" class="btn btn-ghost">加载示例</button>
+          <button id="btnScan" class="btn btn-primary">扫描 →</button>
+        </div>
+      </div>
+      <textarea id="contractInput" spellcheck="false" placeholder="把合同文本粘贴到这里……"></textarea>
+    </section>
+    <section class="panel panel-result">
+      <div class="panel-head">扫描结果高亮</div>
+      <div id="highlightView" class="highlight-view"></div>
+    </section>
+  </main>
+
+  <section class="findings-section">
+    <div class="findings-head">发现 <span id="findingCount">0</span> 处风险提示点</div>
+    <div id="findingsList" class="findings-list"></div>
+  </section>
+
+  <footer class="footer">
+    <p>MIT 协议开源，纯前端关键词匹配，不联网、不上传合同内容，<strong>本工具不提供法律意见，重大合同请咨询专业律师</strong>。</p>
+    <p>想要 AI 自动识别风险条款、给出修改建议、比对标准模板？<a href="https://inzyxuashop.com/aihetong-yuanma.html" target="_blank" rel="noopener">看看完整版 AI 合同审查源码 →</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
